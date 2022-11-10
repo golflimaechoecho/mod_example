@@ -7,7 +7,11 @@ ephemeral = params['ephemeral']
 tempmarker = params['tempmarker']
 version = params['version']
 
-extfactdir = '/etc/puppetlabs/facter/facts.d'
+extfactdir = if Facter.value('os')['family'] == 'windows'
+               'C:/ProgramData/PuppetLabs/facter/facts.d'
+             else
+               '/etc/puppetlabs/facter/facts.d'
+             end
 factname = 'this_external_fact'
 data = {
   factname => {
