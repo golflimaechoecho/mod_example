@@ -26,4 +26,4 @@ File.open("#{extfactdir}/#{factname}.yaml", 'w') do |file|
   file.write(data)
   file.chmod(0o0644)
 end
-puts "Set '#{factname}: #{deployed}' in #{extfactdir}/#{factname}.yaml"
+puts "Set #{factname} in #{extfactdir}/#{factname}.yaml"
