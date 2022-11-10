@@ -1,5 +1,6 @@
 #! /opt/puppetlabs/puppet/bin/ruby
 # task to edit specific fact 'this_external_fact'
+require 'facter'
 require 'json'
 require 'yaml'
 params = JSON.parse(STDIN.read)
