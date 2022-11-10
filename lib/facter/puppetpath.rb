@@ -1,15 +1,15 @@
 # example custom fact
-Facter.add(:rubypath) do
+Facter.add(:puppetpath) do
   confine :kernel do |value|
     value == 'Linux'
   end
-  setcode 'which ruby'
+  setcode 'which puppet'
 end
 
-Facter.add(:rubypath) do
+Facter.add(:puppetpath) do
   confine :osfamily do |value|
     value == 'Windows'
   end
   # Windows uses 'where' instead of 'which'
-  setcode 'where ruby'
+  setcode 'where puppet'
 end
