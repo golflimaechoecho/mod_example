@@ -1,0 +1,22 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Example task to customise contents of external fact",
+  "parameters": {
+    "ephemeral": {
+      "description": "Example ephemeral field",
+      "type": "String[1]",
+      "default": "ephemeral value"
+    },
+    "tempmarker": {
+      "description": "Example tempmarker field",
+      "type": "Enum['temp1','temp2','temp3']",
+      "default": "temp1"
+    },
+    "version": {
+      "description": "Example version field",
+      "type": "Variant[Integer,Pattern[/\\A[^d]+\\Z/]]",
+      "default": "ephemeral value"
+    }
+  }
+}
